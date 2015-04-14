@@ -1,7 +1,4 @@
 #!/bin/bash -e
-module swap intel intel/14.0.1.106
-module swap mvapich2 impi/4.1.3.049
-
 run() {
   /usr/bin/time -f "realTime %e" ibrun.symm -m "$1" &>> work${2}.log
 }
