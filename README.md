@@ -19,4 +19,5 @@ MPI left-right communication kernel for performance testing on Stampede
 
 ## run
 From an interactive idev session:
+
     ./getTime<Impi|Mvapich>.sh
