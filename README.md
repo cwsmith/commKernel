@@ -1,5 +1,5 @@
 ## commKernel
-communication kernel for performance testing on Stampede
+MPI left-right communication kernel for performance testing on Stampede
 
 ## contents
 - envImpi.sh - environment file for Intel MPI
@@ -18,4 +18,5 @@ communication kernel for performance testing on Stampede
     ./build.sh <threadsPerCore=1|2|4>
 
 ## run
+From an interactive idev session:
     ./getTime<Impi|Mvapich>.sh
