@@ -48,3 +48,10 @@ create file ‘hosts’
 run
 
     mpirun_rsh -config ./config -hostfile ./hosts
+
+## Performance Results
+
+![alt text](
+https://github.com/cwsmith/commKernel/raw/master/mpiThreadMultiplePerformanceOnPhi.png
+"Logo Title Text 1")
+
