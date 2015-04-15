@@ -4,7 +4,7 @@ tpc=$1
 flags="-DTHREADS_PER_CORE=$tpc -mmic -Wall -g -O3 -fno-omit-frame-pointer "
 src="kernelComm.c"
 set -x
-mpicc $flags threadWork.c $src -o threadWorkComm -lpthread $LDFLAGS
-mpicc $flags mpiWork.c $src -o mpiWork
+mpicc $flags threadWork.c $src -o threadWorkComm -lpthread $LDFLAGS $THREAD_MULTIPLE
+mpicc $flags mpiWork.c $src -o mpiWork -lpthread $LDFLAGS
 mpicc -DTHREAD_MULTIPLE $flags mpiWork.c $src \
-  -o mpiWorkThreadMult $LDFLAGS
+  -o mpiWorkThreadMult -lpthread $LDFLAGS $THREAD_MULTIPLE
