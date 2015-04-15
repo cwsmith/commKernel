@@ -6,7 +6,7 @@ threadWorkComm() {
   export MIC_MY_NSLOTS=1
   export MIC_PPN=1
   export MV2_ENABLE_AFFINITY=0
-  run "./threadWorkCommMvapich $1" $1
+  run "./threadWorkComm $1" $1
 }
 mpiWork() { 
   export MIC_MY_NSLOTS=$1
