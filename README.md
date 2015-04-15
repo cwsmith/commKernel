@@ -37,10 +37,14 @@ Mvapich2-MIC v2.0 is not installed on Stampede.  To install it follow the instru
 edit the 'ins' variable in the environment file ‘envMvapichMic2.sh’ to point at the chosen install path
 
 ### sanity check the install by running the latency benchmark
+
     source envMvapich2.sh
 create file ‘config’ 
+
     echo “-n 2 : $MV2_MIC_INSTALL_PATH/libexec/mvapich2/osu_latency” >> config
 create file ‘hosts’
+
     echo “mic0:2” >> hosts
 run
+
     mpirun_rsh -config ./config -hostfile ./hosts
