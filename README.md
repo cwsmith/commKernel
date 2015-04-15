@@ -14,8 +14,8 @@ communication kernel for performance testing on Stampede
 - threadWork.c - threaded mpi driver
 
 ## build
-source env<Impi|Mvapich>.sh
-./build.sh <threadsPerCore=1|2|4>
+    source env<Impi|Mvapich>.sh
+    ./build.sh <threadsPerCore=1|2|4>
 
 ## run
-./getTime<Impi|Mvapich>.sh
+    ./getTime<Impi|Mvapich>.sh
