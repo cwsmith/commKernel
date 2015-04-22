@@ -10,12 +10,12 @@ threadWorkComm() {
 mpiWork() { 
   export MIC_MY_NSLOTS=$1
   export MIC_PPN=$1
-  run "./mpiWork"
+  run "./mpiWork" $1
 }
 mpiWorkThreadMult() { 
   export MIC_MY_NSLOTS=$1
   export MIC_PPN=$1
-  run "./mpiWorkThreadMult"
+  run "./mpiWorkThreadMult" $1
 }
 getAvg() {
   awk '/realTime/ {sum+=$2; cnt+=1;} END {print "average " sum/cnt}' work${1}.log 
