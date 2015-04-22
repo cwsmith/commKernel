@@ -34,17 +34,17 @@ Mvapich2-MIC v2.0 is not installed on Stampede.  To install it follow the instru
     ./mvapich2-mic-2.0_mpss-3.3.run
     #set the install path to something in your home/work directory
     #accept defaults for library paths 
-edit the 'ins' variable in the environment file ‘envMvapichMic2.sh’ to point at the chosen install path
+edit the 'ins' variable in the environment file 'envMvapichMic2.sh' to point at the chosen install path
 
 ### sanity check the install by running the latency benchmark
 
     source envMvapich2.sh
-create file ‘config’ 
+create file 'config'
 
-    echo “-n 2 : $MV2_MIC_INSTALL_PATH/libexec/mvapich2/osu_latency” >> config
-create file ‘hosts’
+    echo "-n 2 : $MV2_MIC_INSTALL_PATH/libexec/mvapich2/osu_latency" > config
+create file 'hosts'
 
-    echo “mic0:2” >> hosts
+    echo 'mic0:2' >> hosts
 run
 
     mpirun_rsh -config ./config -hostfile ./hosts
@@ -53,5 +53,5 @@ run
 
 ![alt text](
 https://github.com/cwsmith/commKernel/raw/master/mpiThreadMultiplePerformanceOnPhi.png
-"Logo Title Text 1")
+"Performance Results")
 
