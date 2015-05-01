@@ -1,13 +1,16 @@
 ## commKernel
 MPI left-right communication kernel for performance testing on Stampede.  Three binaries are used for testing:
 
-###threadWorkComm
+threadWorkComm
+
 Only 1 MPI task is ran and the number of workers corresponds to the number of pthreads that are created. Data is exchanged between pthreads. This code is using MPI_THREAD_MULTIPLE
 
-###mpiWork
+mpiWork
+
 Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. The code is using MPI_INIT.
 
-###mpiWorkThreadMult
+mpiWorkThreadMult
+
 Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. The code is using MPI_THREAD_MULTIPLE.
 
 ## contents
