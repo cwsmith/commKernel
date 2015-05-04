@@ -63,6 +63,8 @@ run
 
 ## Performance Results
 
+The following tests used MPSS 3.3 as installed on Stampede.
+
 ![alt text](
 https://github.com/cwsmith/commKernel/raw/master/mpiThreadMultiplePerformanceOnPhi.png
 "Performance Results")
