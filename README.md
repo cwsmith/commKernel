@@ -14,7 +14,8 @@ mpiWorkThreadMult
 Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. The code is using MPI_THREAD_MULTIPLE.
 
 ## contents
-- envImpi.sh - environment file for Intel MPI
+- envImpi.sh - environment file for Intel MPI 4
+- envImpi5.sh - environment file for Intel MPI 5
 - envMvapich.sh - environment file for Mvapich2-mic
 - envMvapich2.sh - environment file for Mvapich2-mic v2.0
 - build.sh - build script 
@@ -28,7 +29,7 @@ Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. T
 - threadWork.c - threaded mpi driver
 
 ## build
-    source env<Impi|Mvapich|Mvapich2>.sh
+    source env<Impi|Impi5|Mvapich|Mvapich2>.sh
     ./build.sh <threadsPerCore=1|2|4>
 
 ## run
