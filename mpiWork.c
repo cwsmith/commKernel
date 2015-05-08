@@ -10,6 +10,7 @@
 int main(int argc, char** argv) {
     int rank;
     int worldSz;
+    double t0;
 #ifdef THREAD_MULTIPLE
     int provided;
     MPI_Init_thread(&argc, &argv, MPI_THREAD_MULTIPLE, &provided);
@@ -23,12 +24,15 @@ int main(int argc, char** argv) {
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &worldSz);
     thdata* data = (thdata*) calloc(1,sizeof(thdata));
+    t0 = MPI_Wtime();
     data->rank = rank;
     data->commsz = worldSz;
     data->id = rank;
     data->peers = 1;
     kernelComm((void*) data);
     MPI_Barrier(MPI_COMM_WORLD);
+    if( !rank )
+      fprintf(stderr, "realTime %.3f\n", MPI_Wtime()-t0);
     free(data);
     MPI_Finalize();
     return 0;

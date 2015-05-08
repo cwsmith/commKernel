@@ -42,8 +42,7 @@ hostnp=0 #tasks per host
 #micnp=240
 micnp=1 #tasks per accelerator
 n_mics=1 #accelerators per host
-app="threadWorkComm"
-args="16"
+app=$1
 
 #The rest of this script should be safe to ignore
 #(Give or take performance)
@@ -69,9 +68,9 @@ MIC_ENVS="-genv PATH $SINK_PATH -genv LD_LIBRARY_PATH $SINK_LD_LIBRARY_PATH"
 
 for h in "${hosts[@]}"; do
 	for i in `seq 0 $(( $n_mics-1 ))`; do
-		printf -- "$MIC_ENVS -n %d -host %s %s\n" $micnp "$h-mic$i" "$app $args" >> $tmpdir/mpi_conf
+		printf -- "$MIC_ENVS -n %d -host %s %s\n" $micnp "$h-mic$i" "$app" >> $tmpdir/mpi_conf
 	done
-		printf -- "$HOST_ENVS -n %d -host %s %s\n" $hostnp "$h-br0" "$app $args" >> $tmpdir/mpi_conf
+		printf -- "$HOST_ENVS -n %d -host %s %s\n" $hostnp "$h-br0" "$app" >> $tmpdir/mpi_conf
 done
 
 cat $tmpdir/mpi_conf

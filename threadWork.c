@@ -13,6 +13,7 @@ int main(int argc, char** argv) {
     int rank;
     int worldSz;
     int provided;
+    double t0;
     MPI_Init_thread(&argc, &argv, MPI_THREAD_MULTIPLE, &provided);
     if( provided != MPI_THREAD_MULTIPLE ) {
       fprintf(stderr, "Error: MPI MPI_THREAD_MULTIPLE not supported\n");
@@ -32,6 +33,7 @@ int main(int argc, char** argv) {
     thdata* data = (thdata*) calloc(threadCnt,sizeof(thdata));
     pthread_t* threads = (pthread_t*) calloc(threadCnt,sizeof(pthread_t));
 
+    t0 = MPI_Wtime();
     for(i=0; i<threadCnt; i++) {
       data[i].rank = rank;
       data[i].commsz = worldSz;
@@ -42,6 +44,9 @@ int main(int argc, char** argv) {
 
     for(i=0; i<threadCnt; i++)
       pthread_join(threads[i], NULL);
+
+    if( !rank )
+      fprintf(stderr, "realTime %.3f\n", MPI_Wtime()-t0);
 
     free(data);
     free(threads);

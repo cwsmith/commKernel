@@ -20,10 +20,10 @@ Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. T
 - envMvapich.sh - environment file for Mvapich2-mic
 - envMvapich2.sh - environment file for Mvapich2-mic v2.0
 - build.sh - build script 
-- getTimeImpi.sh - run script for Intel MPI
+- getTimeImpi.sh - run script for Intel MPI 4 and 5
+- getTimeImpi51.sh - run script for Intel MPI 5.1
 - getTimeMvapich.sh - run script Mvapich2-mic
 - getTimeMvapich2.sh - run script Mvapich2-mic
-- runImpi51.sh - run script for Intel MPI 5.1 (beta)
 - kernelComm.c - communication kernel
 - kernel.h - kernel header
 - mpiWork.c - mpi driver
@@ -31,8 +31,8 @@ Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. T
 - threadWork.c - threaded mpi driver
 
 ## build
-    source env<Impi|Impi5|Mvapich|Mvapich2>.sh
-    ./build.sh <threadsPerCore=1|2|4>
+    source env<Impi|Impi51|Mvapich|Mvapich2>.sh
+    for i in 1 2 4; do ./build.sh $i; done
 
 ## run
 From an interactive idev session:
@@ -67,8 +67,4 @@ run
 ## Performance Results
 
 The following tests used MPSS 3.3 as installed on Stampede.
-
-![alt text](
-https://github.com/cwsmith/commKernel/raw/master/mpiThreadMultiplePerformanceOnPhi.png
-"Performance Results")
-
+see performance.csv
