@@ -16,12 +16,14 @@ Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. T
 ## contents
 - envImpi.sh - environment file for Intel MPI 4
 - envImpi5.sh - environment file for Intel MPI 5
+- envImpi6.sh - environment file for Intel MPI 6 (beta)
 - envMvapich.sh - environment file for Mvapich2-mic
 - envMvapich2.sh - environment file for Mvapich2-mic v2.0
 - build.sh - build script 
 - getTimeImpi.sh - run script for Intel MPI
 - getTimeMvapich.sh - run script Mvapich2-mic
 - getTimeMvapich2.sh - run script Mvapich2-mic
+- runImpi6.sh - run script for Intel MPI 6 (beta - segfaults)
 - kernelComm.c - communication kernel
 - kernel.h - kernel header
 - mpiWork.c - mpi driver
