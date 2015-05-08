@@ -60,7 +60,7 @@ echo "-genv I_MPI_DEBUG 5" > $tmpdir/mpi_conf
 echo "-genv I_MPI_FABRICS 'shm:dapl'" >> $tmpdir/mpi_conf
 echo "-genv I_MPI_FALLBACK 0" >> $tmpdir/mpi_conf
 echo "-genv I_MPI_MIC 1" >> $tmpdir/mpi_conf
-echo "-genv I_MPI_MIC_PREFIX ./mic/" >> $tmpdir/mpi_conf
+echo "-genv I_MPI_MIC_PREFIX ./" >> $tmpdir/mpi_conf
 echo "-genv I_MPI_EXTRA_FILE_SYSTEM 1" >> $tmpdir/mpi_conf
 echo "-genv I_MPI_EXTRA_FILE_SYSTEM_LLIST lustre" >> $tmpdir/mpi_conf
 echo "-genv I_MPI_MIC_PROXY_PATH $mpi/mic/bin" >> $tmpdir/mpi_conf
@@ -69,9 +69,9 @@ MIC_ENVS="-genv PATH $SINK_PATH -genv LD_LIBRARY_PATH $SINK_LD_LIBRARY_PATH"
 
 for h in "${hosts[@]}"; do
 	for i in `seq 0 $(( $n_mics-1 ))`; do
-		printf -- "$MIC_ENVS -n %d -host %s %s\n" $micnp "$h-mic$i" "$app" "$args" >> $tmpdir/mpi_conf
+		printf -- "$MIC_ENVS -n %d -host %s %s\n" $micnp "$h-mic$i" "$app $args" >> $tmpdir/mpi_conf
 	done
-		printf -- "$HOST_ENVS -n %d -host %s %s\n" $hostnp "$h-br0" "$app" "$args" >> $tmpdir/mpi_conf
+		printf -- "$HOST_ENVS -n %d -host %s %s\n" $hostnp "$h-br0" "$app $args" >> $tmpdir/mpi_conf
 done
 
 cat $tmpdir/mpi_conf

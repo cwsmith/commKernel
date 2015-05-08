@@ -23,7 +23,7 @@ Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. T
 - getTimeImpi.sh - run script for Intel MPI
 - getTimeMvapich.sh - run script Mvapich2-mic
 - getTimeMvapich2.sh - run script Mvapich2-mic
-- runImpi51.sh - run script for Intel MPI 5.1 (beta - segfaults)
+- runImpi51.sh - run script for Intel MPI 5.1 (beta)
 - kernelComm.c - communication kernel
 - kernel.h - kernel header
 - mpiWork.c - mpi driver
