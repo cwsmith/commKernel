@@ -27,3 +27,6 @@ mvapich2-mic, threadWorkComm, 4, >100, >100, 7.9684 , 12.4788 , 25.419
 mvapich2-mic2, threadWorkComm, 1, 1.1414 , 6.3 , 5.3218 , 12.2706 , 25.9254 
 mvapich2-mic2, threadWorkComm, 2, 0.6936 , 2.2848 , 4.9388 , 10.5948 , 22.7568 
 mvapich2-mic2, threadWorkComm, 4, 0.6854 , 2.7284 , 5.356 , 10.8154 , 23.2128 
+mpich3, threadWorkComm, 1, 1.8416 , 3.0662 , 7.1046 , 17.6648 , 50.5388 
+mpich3, threadWorkComm, 2, 1.8742 , 3.1186 , 6.7238 , 15.5758 , 45.4098 
+mpich3, threadWorkComm, 4, 1.6294 , >100   , 6.6462 , 14.6372 , 40.4302
