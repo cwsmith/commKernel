@@ -13,7 +13,7 @@ mpiWorkThreadMult
 
 Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. The code is using MPI_THREAD_MULTIPLE.
 
-## tl;dr.
+## tl;dr
 
 MPI_THREAD_MULTIPLE peformance with pthreads is bad on the Phi.  
 
