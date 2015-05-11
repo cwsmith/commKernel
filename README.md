@@ -17,8 +17,11 @@ Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. T
 
 MPI_THREAD_MULTIPLE peformance with pthreads is bad on the Phi.  
 
-This presentation discusses the use of a library that implements the proposed MPI endpoints apis to increase the bandwidth at the cost of increased latency.
+The following presentation and paper discuss the use of a library that implements the proposed MPI endpoints apis to increase bandwidth at the cost of increased latency.  Results show net application speedup despite the latency penalty.
+
 http://meetings.mpi-forum.org/secretary/2014/12/slides/Hybrid-Plenary--EP-Lib.pdf
+
+http://pcl.intel-research.net/publications/sridharan-sc14.pdf
 
 ## contents
 - envImpi.sh - environment file for Intel MPI 4
