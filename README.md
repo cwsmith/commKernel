@@ -13,6 +13,13 @@ mpiWorkThreadMult
 
 Here workers are representing MPI tasks. Data is exhchanged between MPI tasks. The code is using MPI_THREAD_MULTIPLE.
 
+## tl;dr.
+
+MPI_THREAD_MULTIPLE peformance with pthreads is bad on the Phi.  
+
+This presentation discusses the use of a library that implements the proposed MPI endpoints apis to increase the bandwidth at the cost of increased latency.
+http://meetings.mpi-forum.org/secretary/2014/12/slides/Hybrid-Plenary--EP-Lib.pdf
+
 ## contents
 - envImpi.sh - environment file for Intel MPI 4
 - envImpi5.sh - environment file for Intel MPI 5
