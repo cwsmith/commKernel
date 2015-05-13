@@ -4,6 +4,7 @@
 #include<mpi.h>
 #include<pthread.h>
 #include<errno.h>
+#include<math.h>
 #include "kernel.h"
 
 #define NUM_ROUNDS 10*1000
