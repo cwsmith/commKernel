@@ -30,6 +30,11 @@ stampede, mvapich2-mic2, threadWorkComm, 4, 0.6854 , 2.7284 , 5.356 , 10.8154 , 
 stampede, mpich3, threadWorkComm, 1, 1.8416 , 3.0662 , 7.1046 , 17.6648 , 50.5388
 stampede, mpich3, threadWorkComm, 2, 1.8742 , 3.1186 , 6.7238 , 15.5758 , 45.4098
 stampede, mpich3, threadWorkComm, 4, 1.6294 , >100   , 6.6462 , 14.6372 , 40.4302
-i7-3820, mpich3.1.2, mpiWork, N/A, 0.028, 0.022, 0.058, 15.592, 105.44
-i7-3820, mpich3.1.2, mpiWorkThreadMult, N/A, 0.02, 0.016, 0.056, 15.732, 104.2
-i7-3820, mpich3.1.2, threadWorkComm, N/A, 0.162, 0.4, 1.338, 1.802, 7.57
+E5-2680, impi5, threadWorkComm, 1, 0.0492 , 0.1536 , 0.388 , 2.16 , 3.6032 
+E5-2680, impi5, threadWorkComm, 2, 0.0252 , 0.1162 , 0.36 , 0.8398 , 4.5558 
+E5-2680, impi5, threadWorkComm, 4, 0.0238 , 0.0592 , 0.246 , 0.7626 , 1.704 
+E5-2680, impi5, threadWorkComm, rr, 0.0472 , 0.151 , 0.3916 , 0.8586 , 1.7476 
+E5-2680, impi5, mpiWork, 1, 0.004 , 0.0052 , 0.006 , 0.0106 , 0.0296 
+i7-3820, mpich3.1.2, mpiWork, rr, 0.028, 0.022, 0.058, 15.592, 105.44
+i7-3820, mpich3.1.2, mpiWorkThreadMult, rr, 0.02, 0.016, 0.056, 15.732, 104.2
+i7-3820, mpich3.1.2, threadWorkComm, rr, 0.162, 0.4, 1.338, 1.802, 7.57
