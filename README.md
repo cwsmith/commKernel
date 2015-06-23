@@ -31,12 +31,15 @@ http://pcl.intel-research.net/publications/sridharan-sc14.pdf
 - envMvapich2.sh - environment file for Mvapich2-mic v2.0 - edit the install path
 - envMpich3.sh - environment file for MPICH 3.2b2 - edit the install path
 - build.sh - build script 
+- build.x86.sh - build script for stampede host processors
 - getTimeImpi.sh - run script for Intel MPI 4 and 5
+- getTimeImpi.x86.sh - run script for Intel MPI 4 and 5 on stampede host processors
 - getTimeImpi51.sh - run script for Intel MPI 5.1
 - getTimeMvapich.sh - run script Mvapich2-mic
 - getTimeMvapich2.sh - run script Mvapich2-mic
 - getTimeMpich3.sh - run script MPICH 3.2b2
 - kernelComm.c - communication kernel
+- kernelComm.x86.c - communication kernel with affinity on stampede host processors
 - kernel.h - kernel header
 - mpiWork.c - mpi driver
 - README.md - this file 
@@ -44,12 +47,12 @@ http://pcl.intel-research.net/publications/sridharan-sc14.pdf
 
 ## build
     source env<Impi|Impi51|Mvapich|Mvapich2|Mpich3>.sh
-    for i in 1 2 4; do ./build.sh $i; done
+    for i in 1 2 4; do ./build[.x86].sh $i; done
 
 ## run
 From an interactive idev session:
 
-    ./getTime<Impi|Mvapich|Mvapich2|Mpich3>.sh
+    ./getTime<Impi|Mvapich|Mvapich2|Mpich3>[.x86].sh
 
 ## Performance Results
 
